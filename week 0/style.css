@@ -1,0 +1,33 @@
+img {
+    width: auto;
+    height: 300px;
+}
+#main {
+    background-color: #0FF;
+    }
+  #title { 
+      text-align: center;
+    color: red;
+     font-family:cursive; 
+}
+  #img-div { 
+      color: blue;
+  font-family: Lobster, monospace;
+  text-align: center;
+  
+}
+  #tribute-info { 
+      color: black;
+    line-height: 1.5em;
+}
+  
+  #momo-img{
+      width: 1000px;
+    }
+  #momo-info{
+      text-align:center;
+  line-height: 1.5em;
+}
+  footer{
+      text-align:center;
+    }
