@@ -1,40 +1,36 @@
 
-h1 {text-align: center;
+h1 { 
+    text-align: center;
     color: sandybrown;
-
 }
+
 h2 {
     color: sandybrown;
 }
-
 * {
     margin: 5px;
     padding-top: 5px;
     padding-right: 10px;
     padding-left: 10px;
     padding-bottom: 5px;
-    
 }
-
-
-img {
-    float:left;
+img { 
+    float: left;
     width: 250px;
     height: 400px;
 }
-.About-Me {
-    background-color:azure;
-    margin: 2px;
-    padding:4px; 
-    
+
+.about-me {
+    background-color: azure;
 }
 
 
-.wrapper {
+#wrapper {
     background-color: aliceblue;
     display: grid;
-    grid-template-columns: 1fr 1fr;
-    grid-template-rows: 400px 400px;
+    grid-template-columns: 1fr 1fr 1fr;
+    grid-template-rows: 370px 370px;
+    
 }
 
 .Academic-History > h3 {
@@ -55,6 +51,13 @@ img {
     grid-column: 2;
     grid-row: 1;
 }
+.Projects > h3 {
+    color: sandybrown;
+}
+.Projects {
+    grid-column: 3;
+    gird-row: 2;
+}
 .Extra > h4 {
     color: sandybrown;
 }
@@ -72,6 +75,15 @@ img {
     grid-row:2;
     
 }
+.Technical-skills > h4 {
+    color: sandybrown;
+}
+
+.Technical-skills { 
+    grid-column: 3;
+    grid-row: 2;
+}
+
 #Reference {
     text-align: center;
     color: sandybrown;
