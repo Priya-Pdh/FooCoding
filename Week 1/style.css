@@ -6,6 +6,7 @@
     padding-bottom: 5px;
     font-family: 'Times New Roman', Times, serif
 }
+
 h1 { 
     text-align: center;
     color: sandybrown;
@@ -14,6 +15,7 @@ h1 {
 h2 {
     color: sandybrown;
 }
+
 img { 
     float: left;
     width: 250px;
@@ -24,22 +26,20 @@ img {
     background-color: azure;
 }
 
-
 #wrapper {
     background-color: aliceblue;
     display: grid;
     grid-template-columns: 1fr 1fr;
-    grid-template-rows: 310px 310px 250px;
-    
+    grid-template-rows: 310px 310px 250px; 
 }
 
 .Academic-History {
     grid-column:1;
-    grid-row: 1;
-    
+    grid-row: 1;  
 }
 
 h3 { color: sandybrown;
+    
 }
 
 .Work-Experience {
@@ -55,10 +55,10 @@ h3 { color: sandybrown;
 h4 {
     color: sandybrown;
 }
+
 .Extra {
     grid-column: 2;
-    grid-row:2;
-    
+    grid-row:2;   
 }
 
 .Language-skills {
