@@ -1,0 +1,556 @@
+* {
+    margin: 0;
+    padding: 0;
+    font-family: "RO Sans", Calibri, sans-serif;
+    font-weight: normal;
+    font-size: 16px;
+    line-height: 1.5em;
+    
+}
+
+.logo {
+    width: 10%;
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    margin-top: 0;
+    
+}
+
+
+/* for top menu */
+#navBar {
+ box-sizing: border-box;
+ margin: 0 auto;
+ padding: 0;
+ background-color: #006699;
+ 
+}
+
+/* home button */
+#navBar .breadCrumbNav a {
+    color: white;
+    text-decoration: none;
+    font-size: 1.3rem;
+}
+#navBar .breadCrumbNav a:hover {
+    text-decoration: underline;
+}
+
+
+#topMenu {
+    display: flex;
+    justify-content: flex-end;
+    align-content: space-around;
+    gap :40px;
+    margin-right: 40px;
+    list-style-type: none;
+}
+
+#topMenu a{
+     text-decoration: none;
+     color: white;
+}
+
+#topMenu a:hover {
+    text-decoration: underline;
+}
+
+/* searchform */
+
+
+/* inside image container */
+.topTaskNavigation {
+    box-sizing: border-box;
+    width: 380px;
+    height: 280px;
+    background-color: white;
+    position: absolute;
+    z-index: 1;
+    margin: 10px 0 20px 100px;
+}
+
+.topTaskNavigation h2 {
+    margin: 20px 50px 10px 30px;
+    padding-top: 20px;
+    font-weight:530;
+    line-height: 2rem;
+}
+
+.topTaskNavigation li {
+    list-style-type: none;
+    margin: 10px;
+    font-size: 20px;
+    
+}
+
+i {
+    color: #006699;
+
+} 
+
+.topTaskNavigation a {
+    text-decoration: none;
+    color: #006699;
+
+}
+
+.topTaskNavigation a:hover {
+    text-decoration: underline;
+}
+
+#content-wrapper .img-container img {
+    position: relative;
+    width: 100%;
+    height: 20rem;
+    
+}
+#content-wrapper #footer1 {
+    position: absolute;
+    color: white;
+    text-shadow:  0px 0px 1px rgb(0 0 0 / 50%);
+    z-index: 0.5;
+    left: 0;
+    bottom: 0;
+    height: 32.5%;
+    width: 100%;
+    display: block;
+}
+
+/* for 3rd container with grids */
+.editorial-navigation {
+    background-color: #f3f3f3;
+    margin:0;
+    padding-top: 40px;
+    height: 550px;
+    padding-left: 100px;
+    padding-right: 60px;
+    
+}
+
+.fourItems ul{
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    row-gap: 5px;
+}    
+
+.fourItems p {
+    width: 200px;
+    line-height: 1.4rem;
+    
+}
+.fourItems h3 {
+    font-size: 23px;
+}
+
+.wrapper ul li{
+    list-style-type: none; 
+    
+}
+.navItem a{
+    text-decoration: none;
+}
+
+.navItem a:hover {
+    text-decoration: underline;
+}
+.navItem h3 {
+    color: #006699;
+    padding-bottom: 10px;
+}
+/* container 4 Direct naar and Nieuws */
+
+.fullWidthSection {
+    box-sizing: border-box;
+    border-top: 1px solid gainsboro;
+    margin: 40px 60px 40px 100px;
+
+}
+/* Direct naar */
+
+.fullWidthSection .brickRow#spotLight {
+        display: flex;
+        flex-wrap: wrap;
+        gap: 40px;
+        margin-left: 0;
+        margin-right: 0;
+        margin-bottom: 60px;
+        justify-content: flex-start;
+        position: relative;
+
+ }
+
+ #Direct-container .brick .brick-image  img,p{
+    width: 24rem; 
+    
+}
+
+.fullWidthSection h2 {
+    font-size: 20px;
+    margin: 10px 0 0 0;
+    font-weight: bold;
+}
+
+
+.brickRow .brick .a-unlink, h3 {
+    font-size: 20px;
+    text-decoration: none;
+    color: #006699;
+}
+.brickRow .brick .a-unlink h3:hover {
+    text-decoration: underline;
+}
+
+
+/* Nieuws */
+
+#nieuws-container {
+    box-sizing: border-box;
+    border-top: 1px solid gainsboro;
+}
+
+.brickRow h2 {
+    padding-top: 20px;
+
+}
+
+ .nieuws {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    margin-top: 20px;
+    column-gap: 20px;
+    row-gap: 30px;
+}
+
+.nieuws .brick a {
+    text-decoration: none;
+    color: #006699;
+}
+
+.publDate {
+    font-weight: bold;
+}
+
+.brickRow .brick .brick-text .publDate {
+    color: black;
+}
+
+.brickRow.spotLight a,h3:hover {
+    text-decoration:underline;
+}
+
+.brickRow .more {
+    font-size: 20px;
+    text-decoration: none;
+    color: #a90061;
+    font-weight: bold;
+}
+
+.brickRow .more:hover {
+    text-decoration: underline;
+}
+
+
+
+/* container 5 */
+#small-container {
+    display: flex;
+    justify-content: flex-start;
+    gap: 40px;
+    margin-left: 100px;
+    height: 210px; 
+    max-width: 60%;   
+
+}
+#small-container .brick-banner .content,span {
+    color:#006699;
+    font-weight: bold;
+    
+}
+#small-container .brick-banner a,.content {
+    text-decoration: none; 
+}
+
+#small-container .brick-banner a .content:hover {
+    text-decoration: underline; 
+}
+
+.brick-banner {
+    box-sizing: content-box;
+    border: 2px solid #EEEEEE;
+    padding: 20px;
+    text-align: center;
+}
+.brick-banner h2 {
+    font-size: 28px;
+}
+.brick-banner span {
+    font-size: 40px;
+    display: block;
+    text-align: center;
+}
+
+#small-container .brick-banner .color {
+    color: #a90061;
+    font-weight: bold;
+}
+ .icon {
+     color: #a90061;
+     margin-right: 3px;
+ }
+
+/* container 6 */
+.wrapper1 {
+    box-sizing: border-box;
+    background-color:#006699;
+    padding: 20px;
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 20px; 
+    color: white;
+    margin-top: 60px;
+}
+.wrapper1 .payoff span {
+    color: white;
+    font-family: "RO Sans";
+    font-style: italic;
+    font-weight: normal;
+    font-size: 1.4rem;
+}
+
+.column li {
+    padding-bottom: 10px ;
+    
+}
+
+.column li a {
+    text-decoration: none;
+    color: white;
+}
+
+ .column ul {
+     list-style: none;
+     
+ }
+ .column a:hover {
+     text-decoration: underline;
+     
+ }
+
+ .site-footer .column h2 {
+     margin: 0;
+     padding-bottom: 10px;
+     color: white;
+     font-size: 1.2rem;
+ }
+ .icon1 {
+     color: white;
+     margin-right: 3px;
+ }
+
+/* for footer */
+
+.languages .wrapper2 ul {
+       display: flex;
+       justify-content: center;
+       gap: 10px;
+       margin: 10px 0 0 0;
+       padding: 40px;
+       background-color: white;
+       list-style-type: none;
+}
+
+.languages .wrapper2 ul li a {
+text-decoration: none;
+box-sizing: border-box;
+border: 1px solid lightskyblue;
+margin: 10px;
+padding: 5px;
+color: #006699;
+
+}
+
+
+.languages .wrapper2 ul li a:hover {
+ background-color: #006699;
+    color: white;
+}
+
+.selected {
+    font-weight: 1000;
+}
+
+
+/* desktop */
+@media (min-width: 1200px) and (max-width: 1600px) {
+    html {
+        max-width: 1600px;        
+    }
+}
+
+
+
+/* Tablet */
+@media (min-width: 768px) and (max-width: 1100px) {
+  * {
+      margin: 0;
+      padding: 0;
+  }
+
+
+/* inside image container */
+    .topTaskNavigation {
+    box-sizing: border-box;
+    width: 320px;
+    height: 300px;
+    background-color: white;
+    position: absolute;
+    z-index: 1;
+    margin: 20px 0 40px 20px;
+    }
+
+    .topTaskNavigation ul, li {
+    font-size: 8px;
+    
+     }
+
+    #content-wrapper .img-container img {
+    position: relative;
+    width: 100%;
+    height: 25rem;
+    
+    } 
+
+    #content-wrapper #footer1 {
+    height: 57%;
+
+    }
+
+    .editorial-navigation {
+    padding-top: 40px;
+    height: 900px;
+    padding-left: 20px;
+    padding-right: 60px;
+    
+    }
+    
+    .fourItems ul {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    row-gap: 10px;
+    }  
+
+/* container 4 Direct naar and Nieuws */
+
+    .fullWidthSection {
+    box-sizing: border-box;
+    border-top: 1px solid gainsboro;
+    margin: 40px 0 40px 20px;
+    }
+
+    #Direct-container .brick .brick-image  img,p{
+    width: 21.5rem; 
+    
+    }
+
+     .nieuws {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    margin-top: 20px;
+    column-gap: 20px;
+    row-gap: 30px;
+     }
+
+    #small-container {
+    gap: 40px;
+    margin-left: 25px;
+    margin-right: 25px ;
+    height: 220px; 
+    max-width: 100%;   
+
+    }
+    
+    .languages .wrapper2 ul {
+    row-gap: 2px;
+    }
+
+}
+
+/* Mobile */
+@media (min-width: 390px) and (max-width: 844px) {
+    * {
+        margin:0;
+        padding:0;
+    }
+
+    .logo {
+        width: 30%;
+    }
+    
+
+    #topMenu li a{
+        color:#006699;
+    }
+    .topTaskNavigation {
+        width: 315px;
+        height: 280px;
+        margin: 20px 0 40px 20px;
+    }
+    
+    #content-wrapper #footer1 {
+        height: 49.5%;
+    
+    }
+     .fourItems ul{
+    display: grid;
+    grid-template-columns: 1fr;
+     }
+
+
+    .nieuws {
+    display: grid;
+    grid-template-columns: 1fr ;
+    }
+
+   .fullWidthSection .brickRow#spotLight {
+    display: grid;
+    grid-template-columns: 1fr;
+    }
+
+   #Direct-container .brick .brick-image  img,p{
+    width: 23rem; 
+    
+    }
+   .editorial-navigation {
+    
+    padding-top: 40px;
+    height: 1600px;
+    padding-left: 15px;
+    padding-right: 15px;
+    
+    }
+
+    .fullWidthSection {
+    margin: 40px 0 40px 10px;
+    }
+
+    #small-container {
+        display: grid;
+        grid-template-columns: 1fr;
+        max-width: 110%;   
+        margin-left: 25px;
+        margin-right: 25px ;
+        margin-bottom: 40px;
+        padding-bottom: 220px;
+
+    }
+
+    .languages .wrapper2 ul {
+        display: flex;
+        flex-wrap: wrap;
+        margin:0;
+        padding:10px 0 10px 0;
+        }
+    
+
+}
