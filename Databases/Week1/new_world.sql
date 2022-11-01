@@ -48,11 +48,6 @@ JOIN country co
              ON ci.countryCode = co.code
              WHERE co.name = 'Netherlands'
              
-OR
-
-SELECT name, countryCode
-FROM city
-WHERE countryCode ='NLD'
 
 //12.What is the population of Rotterdam ?
 
