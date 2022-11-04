@@ -63,8 +63,10 @@ ORDER BY surfaceArea DESC LIMIT 10;
 
 //14.What's the top 10 most populated cities?
 
-SELECT name, population
-FROM city
+SELECT ci.name, co.name, ci.population
+FROM city ci
+JOIN country co
+          ON ci.countryCode = co.code
 ORDER BY population DESC LIMIT 10;
 
 //15.What is the population of the world ?
