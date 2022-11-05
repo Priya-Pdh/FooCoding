@@ -7,10 +7,10 @@ USE hr;
 
 CREATE TABLE employee(
     EmployeeID INT(4),
-    FirstName VARCHAR(10) NOT NULL,
-    LastName VARCHAR(10) NOT NULL,
-    Email VARCHAR(20),
-    Salary VARCHAR(8),
+    FirstName VARCHAR(255) NOT NULL,
+    LastName VARCHAR(255) NOT NULL,
+    Email VARCHAR(255),
+    Salary VARCHAR(255),
     JoiningDate DATE,
     LocationID INT(4),
     PRIMARY KEY (EmployeeID)
