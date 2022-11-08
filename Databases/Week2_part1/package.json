@@ -1,0 +1,14 @@
+{
+  "name": "week2_part1",
+  "version": "1.0.0",
+  "description": "",
+  "main": "nodesql.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "Priya",
+  "license": "ISC",
+  "dependencies": {
+    "mysql2": "^2.3.3"
+  }
+}
