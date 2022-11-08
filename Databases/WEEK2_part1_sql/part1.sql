@@ -32,7 +32,7 @@ WHERE lower(co.region) = 'southern europe';
 
 //with prepared statement:
 
-prepare region from 'SELECT cl.language, co.region
+PREPARE region from 'SELECT cl.language, co.region
 FROM countrylanguage cl
 INNER JOIN country co
        ON cl.countryCode = co.code  
