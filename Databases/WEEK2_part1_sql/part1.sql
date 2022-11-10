@@ -23,7 +23,7 @@ execute country using @n;
 
 Solution2:
 //without prepared statement, if continent name is ‘southern europe’
-SELECT cl.language, co.region
+SELECT DISTINCT cl.language, co.region
 FROM countrylanguage cl
 INNER JOIN country co
        ON cl.countryCode = co.code  
@@ -32,7 +32,7 @@ WHERE lower(co.region) = 'southern europe';
 
 //with prepared statement:
 
-PREPARE region from 'SELECT cl.language, co.region
+PREPARE region from 'SELECT DISTINCT cl.language, co.region
 FROM countrylanguage cl
 INNER JOIN country co
        ON cl.countryCode = co.code  
@@ -71,7 +71,7 @@ execute language using @a;
 
 
 Answer 4:
-SELECT continent, count(cl.language) AS total_languages_spoken
+SELECT DISTINCT continent, count(cl.language) AS total_languages_spoken
 FROM country co
 INNER JOIN countrylanguage cl
        ON co.code = cl.countryCode
