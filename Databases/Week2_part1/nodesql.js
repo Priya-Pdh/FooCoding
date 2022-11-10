@@ -29,9 +29,9 @@ app.get('/countryName/:countryName', (req, res)=>{
   
 //ANSWER 2: 
 
-app.get('/countryLanguage/:continent', (req, res)=>{
+app.get('/language/:region', (req, res)=>{
   db.execute(
-    'SELECT DISTINCT cl.language, co.region FROM countrylanguage cl INNER JOIN country co ON cl.countryCode = co.code  WHERE lower(co.region) = ?', [req.params.continent],
+    'SELECT DISTINCT cl.language, co.region FROM countrylanguage cl INNER JOIN country co ON cl.countryCode = co.code  WHERE lower(co.region) = ?', [req.params.region],
     function(err, results, fields) {
       console.log(results); 
       console.log(fields);
