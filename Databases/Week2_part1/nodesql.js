@@ -14,7 +14,7 @@ const db= mysql.createConnection({
 const app = express();
 // execute will internally call prepare and query
 
-// ANSWER 1: here user takes 'NEPAL' as an country input
+// ANSWER 1
 app.get('/countryName/:countryName', (req, res)=>{
   db.execute(
     'SELECT  ci.name AS capital FROM city ci INNER JOIN country co ON ci.id = co.capital WHERE lower(co.name) = ?', [req.params.countryName],
@@ -29,7 +29,7 @@ app.get('/countryName/:countryName', (req, res)=>{
 
 
   
-//ANSWER 2: here user takes 'SOUTHERN EUROPE' as an contient input
+//ANSWER 2: 
 
 app.get('/countryLanguage/:continent', (req, res)=>{
   db.execute(
@@ -44,7 +44,7 @@ app.get('/countryLanguage/:continent', (req, res)=>{
    } );
 
 
-  //ANSWER 3: here user takes 'SWEDISH' as an language input
+  //ANSWER 3: 
 
   app.get('/numberOfCountry/:language', (req, res)=>{
     db.execute(
@@ -71,8 +71,6 @@ app.get('/countryLanguage/:continent', (req, res)=>{
   )
      
      } );
-
-  
 
   app.listen('3000', ()=> {
     console.log('server started on port 3000');
