@@ -60,11 +60,9 @@ db.connect(function(error){
     // const listID = req.body.listID
     const taskList = req.body.taskList;
     const due_date = req.body.due_date;
-    const item_list = req.body.item_list;
-    const status = req.body.status;
-    const sql = `INSERT INTO task(taskList, due_date, item_list, status) 
-    VALUES (?, ?, ?, ?);`
-    db.query(sql, [taskList, due_date, item_list, status],
+    const sql = `INSERT INTO task(taskList, due_date) 
+    VALUES (?, ?);`
+    db.query(sql, [taskList, due_date],
        function(error, result){
       if(error){
         console.log(error);
@@ -77,9 +75,9 @@ db.connect(function(error){
   app.post('/addItems', (req,res)=> {
     const item_list = req.body.item_list;
     const status = req.body.status;
-    const sql = `INSERT INTO task( item_list, status) 
+    const sql = `INSERT INTO item(item_list, status) 
     VALUES (?, ?);`
-    db.query(sql, [ item_list, status],
+    db.query(sql, [item_list, status],
        function(error, result){
       if(error){
         console.log(error);
@@ -88,4 +86,16 @@ db.connect(function(error){
       res.send(result);
     });
   
+  });
+
+
+  app.delete('/deleteTodos/:id', (req, res)=> {
+    const id= req.params.id;
+    db.query('DELETE FROM task WHERE id= ?', id, (error, result)=> {
+        if(error){
+            console.log(error);
+        }else {
+            res.send(result);
+        }
+    });
   });
