@@ -88,3 +88,9 @@ db.connect(function(error){
       res.send(result);
     }); 
   });
+
+  app.use(express.static(path.join(client, 'build')));
+
+app.get('/', function (req, res) {
+  res.sendFile(path.join(client, 'build', 'index.html'));
+});
