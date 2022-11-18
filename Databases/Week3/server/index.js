@@ -17,7 +17,7 @@ const db = mysql.createConnection({
   host: 'localhost',
   user: 'root',
   password:'Databases.143',
-  database:'todo_app'
+  database:'db_todos'
 });
 
 //connect with mysql
@@ -29,12 +29,16 @@ db.connect(function(error){
     console.log('Connected to Mysql');
   })
   
-  app.post('/addUser', (req,res)=> {
-    const name = req.body.name;
-    const email = req.body.email;
-    const sql = `INSERT INTO user(name, email) 
-    VALUES (?, ?);`
-    db.query(sql, [name, email],
+  app.post('/addtodos', (req,res)=> {
+    const user_name= req.body.user_name;
+    const todo_list = req.body.todo_list;
+    const item_list = req.body.item_list;
+    const status = req.body.status;
+    const due_date = req.body.due_date;
+
+    const sql = `INSERT INTO todos (user_name, todo_list, item_list, status, due_date) 
+    VALUES (?, ?, ?, ?, ?);`
+    db.query(sql, [user_name, todo_list, item_list, status, due_date],
        function(error, result){
       if(error){
         console.log(error);
@@ -45,8 +49,8 @@ db.connect(function(error){
   
   });
 
-  app.get('/getUser', (req,res)=> {
-    db.query('SELECT * FROM user', (error, result)=> {
+  app.get('/getTodos', (req,res)=> {
+    db.query('SELECT * FROM todos', (error, result)=> {
         if(error){
             console.log(error)
         } else {
@@ -55,47 +59,32 @@ db.connect(function(error){
     })
   })
 
-
-  app.post('/addTodos', (req,res)=> {
-    // const listID = req.body.listID
-    const taskList = req.body.taskList;
-    const due_date = req.body.due_date;
-    const sql = `INSERT INTO task(taskList, due_date) 
-    VALUES (?, ?);`
-    db.query(sql, [taskList, due_date],
-       function(error, result){
-      if(error){
-        console.log(error);
-        return;
-      }
-      res.send(result);
-    });
-  
-  });
-  app.post('/addItems', (req,res)=> {
+  app.put("/update", (req, res) => {
+    const id = req.body.id;
     const item_list = req.body.item_list;
-    const status = req.body.status;
-    const sql = `INSERT INTO item(item_list, status) 
-    VALUES (?, ?);`
-    db.query(sql, [item_list, status],
-       function(error, result){
-      if(error){
+    db.query(
+      "UPDATE todos SET item_list = ? WHERE id = ?",
+      [item_list, id],
+      (err, result) => {
+        if (error) {
+          console.log(error);
+        } else {
+          res.send(result);
+        }
+      }
+    );
+  });
+
+
+
+  app.delete('/detele/:id', (req, res)=>{
+    const id= req.body.id;
+    db.query(`DELETE FROM todos
+    WHERE id = ?;`, [id], function(error, result){
+      if(error) {
         console.log(error);
         return;
       }
       res.send(result);
-    });
-  
-  });
-
-
-  app.delete('/deleteTodos/:id', (req, res)=> {
-    const id= req.params.id;
-    db.query('DELETE FROM task WHERE id= ?', id, (error, result)=> {
-        if(error){
-            console.log(error);
-        }else {
-            res.send(result);
-        }
-    });
+    }); 
   });
