@@ -89,8 +89,8 @@ db.connect(function(error){
     }); 
   });
 
-  app.use(express.static(path.join(client, 'build')));
+//   app.use(express.static(path.join(week3, 'build')));
 
-app.get('/', function (req, res) {
-  res.sendFile(path.join(client, 'build', 'index.html'));
-});
+// app.get('/', function (req, res) {
+//   res.sendFile(path.join(week3, 'build', 'index.html'));
+// });
